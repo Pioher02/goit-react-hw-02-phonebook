@@ -7,6 +7,7 @@ class App extends Component {
   state = {
     contacts: [],
     name: '',
+    number:'',
   };
 
   saveContact = evt => {
@@ -14,10 +15,11 @@ class App extends Component {
 
     const form = evt.currentTarget;
     this.setState({ name: form.elements.name.value });
+    this.setState({ number: form.elements.number.value });
     this.setState({
       contacts: [
         ...this.state.contacts,
-        { id: nanoid(), name: form.elements.name.value },
+        { id: nanoid(), name: form.elements.name.value, number:form.elements.number.value },
       ],
     });
 
