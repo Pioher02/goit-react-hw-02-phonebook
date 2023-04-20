@@ -52,6 +52,7 @@ class ContactForm extends Component {
               borderRadius: 5,
               border: 'none',
               boxShadow: '-1px 1px 3px -1px',
+              cursor: 'pointer',
             }}
           >
             Add contact
